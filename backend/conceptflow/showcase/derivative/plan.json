@@ -1,0 +1,21 @@
+{
+  "title": "The Derivative: Speed at a Single Instant",
+  "hook": "How fast is something moving at a single instant, when no time passes at all?",
+  "objectives": [
+    "Interpret an average rate of change as the slope of a secant line.",
+    "Explain why the derivative is a limit rather than a division by zero.",
+    "Compute the derivative of x squared from the definition."
+  ],
+  "sections": [
+    {"title": "A question about an instant", "goal": "Create the puzzle of instantaneous speed.", "explanation": "Average speed is distance over time. Shrinking the time interval to nothing turns the fraction into 0/0.", "key_formula": "\\text{average speed} = \\frac{\\Delta d}{\\Delta t}", "visual_idea": "A dot drives along a road; a brace marks the distance; the interval shrinks to a point and the fraction becomes 0/0."},
+    {"title": "Slopes of secant lines", "goal": "Connect average rate of change with the slope of a secant.", "explanation": "Plot position as a curve. The average rate between x and x+h is the rise over the run of the line through the two points.", "key_formula": "\\text{slope} = \\frac{f(x+h) - f(x)}{h}", "visual_idea": "Axes with a curve, two points, a rise-over-run triangle and the secant line."},
+    {"title": "Let h shrink", "goal": "See the secant slopes converge and name the limit.", "explanation": "Sliding the second point toward the first, the secant pivots and its slope settles on one value; zoomed in, the curve looks straight. That value is the derivative.", "key_formula": "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}", "visual_idea": "A value tracker shrinks h; readouts of h and the slope converge; the camera zooms in on the point; the tangent appears."},
+    {"title": "An example: x squared", "goal": "Use the definition on a concrete function and land the takeaway.", "explanation": "For f(x) = x squared the difference quotient simplifies to 2x + h, so the derivative is 2x: a new function giving the slope everywhere.", "key_formula": "\\frac{d}{dx}\\, x^2 = 2x", "visual_idea": "The algebra unfolds line by line; then a tangent line slides along a parabola with a live slope readout equal to 2x."}
+  ],
+  "takeaway": "The derivative turns the meaningless 0/0 into something precise: the slope of the curve - the rate of change - at every single instant.",
+  "quiz": [
+    {"question": "The slope of the secant line through (x, f(x)) and (x+h, f(x+h)) measures...", "choices": ["the average rate of change of f between x and x+h", "the instantaneous rate of change of f at x", "the area under the curve from x to x+h", "the value of f at x+h"], "answer": 0, "why": "Rise over run across the interval is exactly an average rate of change."},
+    {"question": "If f(x) = x squared, what is f'(3)?", "choices": ["3", "6", "9", "2"], "answer": 1, "why": "The derivative of x squared is 2x, and 2 times 3 is 6."},
+    {"question": "Why can't we just set h = 0 in (f(x+h) - f(x)) / h?", "choices": ["It gives 0/0, which has no value", "It always gives 1", "f is not defined at x", "It gives a negative number"], "answer": 0, "why": "Both numerator and denominator become zero; the derivative is the limit as h approaches zero instead."}
+  ]
+}

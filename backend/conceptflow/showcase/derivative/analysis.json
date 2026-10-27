@@ -1,0 +1,31 @@
+{
+  "topic": "The derivative",
+  "domain": "Single-variable calculus",
+  "core_insight": "Speed at an instant makes sense as the value that average speeds over shorter and shorter intervals settle on - geometrically, the slope that secant lines approach as they pivot into the tangent.",
+  "prerequisites": ["functions and their graphs", "slope of a straight line as rise over run", "an informal idea of a limit"],
+  "key_ideas": [
+    "Average rate of change over an interval is the slope of a secant line.",
+    "Setting the interval to zero directly gives the meaningless 0/0.",
+    "Shrinking the interval makes the secant slopes approach one value; zoomed in, a smooth curve looks straight.",
+    "That limiting slope is the derivative: f'(x) = lim_{h->0} (f(x+h) - f(x)) / h.",
+    "Worked example: for x squared the difference quotient is 2x + h, so the derivative is 2x."
+  ],
+  "central_formula": "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+  "intuitions": [
+    "A car's speedometer reading at one moment.",
+    "Zooming into a smooth curve until it looks like a straight line.",
+    "A secant line pivoting around a fixed point until it just touches the curve."
+  ],
+  "misconceptions": [
+    "That the derivative is found by plugging h = 0 into the difference quotient (it gives 0/0).",
+    "That the tangent line must touch the curve at only one point.",
+    "That the derivative is a single number rather than a new function of x."
+  ],
+  "visual_opportunities": [
+    "A dot moving along a road while its distance is measured.",
+    "A secant line through two points of a curve whose second point slides toward the first.",
+    "Live readouts of h and of the secant's slope converging.",
+    "A camera zoom into a point of the curve until it looks straight.",
+    "A tangent line sliding along a parabola with its slope read out as 2x."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "The Derivative: Speed at a Single Instant",
+  "prompt": "Explain the derivative as the slope of a curve at a single instant",
+  "keywords": ["derivative", "derivatives", "slope", "tangent", "secant", "calculus", "differentiation", "differentiate", "rate", "instant", "limit", "speed", "velocity"],
+  "responses": {
+    "planner": ["analysis.json", "plan.json", "storyboard.json"],
+    "coder": ["coder_v1.md"],
+    "fixer": ["fixer_v1.md"],
+    "visual_critic": ["visual_review.json"],
+    "pedagogy_critic": ["pedagogy_review.json"]
+  },
+  "bug": {
+    "fixed": "self.play(ShowPassingFlash(tangent.copy().set_color(HIGHLIGHT), time_width=0.5), FadeIn(tangent_label), run_time=b.t(0.15))",
+    "broken": "self.play(ShowCreationThenFadeOut(tangent.copy().set_color(HIGHLIGHT)), FadeIn(tangent_label), run_time=b.t(0.15))"
+  },
+  "coder_notes": [
+    "Scenes 2 and 3 share one position curve and axes so the secant picture carries over between them.",
+    "Dots in S3 scale with the camera frame so they stay small during the zoom into P.",
+    "S4 ends on a live tangent whose slope readout is 2x, landing the takeaway visually."
+  ],
+  "fixer_changes": [
+    "S3: replaced ShowCreationThenFadeOut, which no longer exists in Manim Community, with ShowPassingFlash on a highlighted copy of the tangent (NameError in s3b3)."
+  ]
+}

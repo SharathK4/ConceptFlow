@@ -1,0 +1,47 @@
+{
+  "title": "The Derivative: Speed at a Single Instant",
+  "logline": "Average speeds over shrinking intervals settle on one number - the slope of the curve at an instant.",
+  "color_story": "PRIMARY blue is the position curve and distance travelled; HIGHLIGHT yellow is the point we care about; SECONDARY teal is the second point that slides; ACCENT terracotta is the secant/tangent slope and the final result; MUTED grey is axes, braces and annotations.",
+  "scenes": [
+    {
+      "id": "s1",
+      "title": "A question about an instant",
+      "purpose": "Pose the puzzle: speed at an instant seems to require dividing zero by zero.",
+      "beats": [
+        {"id": "s1b1", "narration": "How fast is something moving at one single instant, when no time passes at all?", "visual": "Title card 'The Derivative' with the italic subtitle 'speed at a single instant', written in the centre."},
+        {"id": "s1b2", "narration": "Average speed is easy. Measure the distance covered, and divide by the time it took.", "visual": "Clear. A horizontal road (number line 0 to 10, MUTED) across the upper half; a HIGHLIGHT dot drives from 0 to 6 leaving a PRIMARY trail; a MUTED brace labels the trail Delta d; below, the equation average speed = Delta d over Delta t is written."},
+        {"id": "s1b3", "narration": "But shrink the time interval down to a single instant, and that fraction becomes zero over zero. So what could speed at an instant even mean?", "visual": "The trail shrinks into the dot; the equation transforms into speed at an instant = 0/0 ?, with 0/0 in ACCENT and circled."}
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Slopes of secant lines",
+      "purpose": "Show that an average rate of change is the slope of a secant line.",
+      "beats": [
+        {"id": "s2b1", "narration": "Let's draw position as a curve. The height tells us the distance travelled after x seconds.", "visual": "Heading 'Slopes of secant lines'. Axes on the left (x from 0 to 5, f(x) from 0 to 8) with a PRIMARY curve f(x) = 0.3x^2 + 0.4 drawn from left to right and labelled f(x)."},
+        {"id": "s2b2", "narration": "Pick a moment x, and a moment a little later, x plus h. The line through these two points is called a secant.", "visual": "HIGHLIGHT dot P at x = 1.5 and SECONDARY dot Q at x = 3.5 appear on the curve; a dashed MUTED run labelled h and a rise labelled Delta f form a triangle; an ACCENT secant line passes through P and Q."},
+        {"id": "s2b3", "narration": "Its slope, rise over run, is f of x plus h minus f of x, all divided by h. That's exactly the average speed over the interval.", "visual": "On the right, the equation slope = (f(x+h) - f(x)) / h is written, then circumscribed in HIGHLIGHT."}
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Let h shrink",
+      "purpose": "Watch secant slopes converge to the tangent slope and define the derivative as that limit.",
+      "beats": [
+        {"id": "s3b1", "narration": "Now slide the second point toward the first. As h shrinks, the secant line pivots, and its slope starts to settle down.", "visual": "Heading 'Let h shrink'. Same axes and curve on the left. Q slides toward P as h goes from 2 to 0.4; the ACCENT secant pivots. On the right, live readouts h = ... and slope = ... update."},
+        {"id": "s3b2", "narration": "Zoom in close enough, and the curve itself looks like a straight line. The secant and the curve become indistinguishable.", "visual": "h continues to 0.05, then the camera zooms into P until the curve looks straight and the secant lies along it; then zooms back out."},
+        {"id": "s3b3", "narration": "That settling value is the derivative: the limit of these slopes as h goes to zero. It is the slope of the tangent line.", "visual": "The secant becomes the ACCENT tangent line at P; readouts fade; on the right the definition f'(x) = lim as h->0 of (f(x+h) - f(x)) / h is written with the limit in ACCENT and boxed."}
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "An example: x squared",
+      "purpose": "Compute a derivative from the definition and land the takeaway.",
+      "beats": [
+        {"id": "s4b1", "narration": "Let's try it with f of x equals x squared. Expanding x plus h squared, the difference on top is two x h plus h squared.", "visual": "Heading 'An example: x squared'. Centre-left, the steps (x+h)^2 - x^2 over h = (2xh + h^2) over h appear line by line."},
+        {"id": "s4b2", "narration": "Divide by h and we're left with two x plus h. Now let h go to zero, and the slope is exactly two x.", "visual": "Further lines = 2x + h and then h -> 0 gives 2x, with 2x boxed in ACCENT."},
+        {"id": "s4b3", "narration": "So the derivative is a new function. At every point on the parabola, it tells you the slope of the curve, the rate of change at that single instant.", "visual": "Clear the algebra except the boxed result, which moves to the top right as f'(x) = 2x. Axes on the left with a PRIMARY parabola; an ACCENT tangent line slides along it from x = -1.5 to x = 1.5 with a HIGHLIGHT point, while a live readout shows slope = 2x matching the tangent."}
+      ]
+    }
+  ]
+}

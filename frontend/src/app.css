@@ -1,0 +1,156 @@
+.cf {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 48px 40px;
+  min-height: 100vh;
+}
+
+.cf.is-open {
+  opacity: 0.92;
+}
+
+.cf__light {
+  position: absolute;
+  inset: -64px 0 auto;
+  height: 720px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: linear-gradient(180deg, #000 0%, #000 54%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 54%, transparent 100%);
+}
+
+/* -------------------------------------------------------------- masthead */
+
+.cf__masthead {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 34px;
+  opacity: 0;
+  animation: rise 900ms var(--ease) forwards;
+}
+
+.cf__wordmark {
+  font-family: var(--display);
+  /* "ConceptFlow" set in Against is ~7.75 em wide, so the size follows the
+   * column width rather than a fixed clamp - it must never be clipped. */
+  font-size: clamp(40px, calc((100vw - 110px) / 7.9), 138px);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.014em;
+  color: var(--ink);
+  margin-left: -0.045em;
+}
+
+.cf__under {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.cf__standfirst {
+  max-width: 58ch;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  letter-spacing: 0.008em;
+  opacity: 0;
+  animation: rise 900ms var(--ease) 220ms forwards;
+}
+
+.cf__status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 16px;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.cf__svc {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.cf__svc i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-4);
+}
+
+.cf__svc.is-on {
+  color: var(--ink-1);
+}
+
+.cf__svc.is-on i {
+  border-color: var(--sage);
+  background: var(--sage);
+}
+
+.cf__svc.is-off {
+  color: var(--accent);
+}
+
+/* ---------------------------------------------------------------- panels */
+
+.cf__panels {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 20px;
+}
+
+#stage {
+  scroll-margin-top: 18px;
+}
+
+.cf__foot {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 40px;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-4);
+}
+
+@media (max-width: 1080px) {
+  .cf {
+    padding: 44px 28px 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .cf {
+    padding: 36px 16px 28px;
+  }
+  .cf__wordmark {
+    font-size: calc((100vw - 48px) / 7.9);
+  }
+  .cf__under {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cf__status {
+    justify-content: flex-start;
+  }
+  .cf__foot {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf__masthead,
+  .cf__standfirst {
+    animation: none;
+    opacity: 1;
+  }
+}

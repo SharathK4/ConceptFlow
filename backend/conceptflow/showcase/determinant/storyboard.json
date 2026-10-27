@@ -1,0 +1,46 @@
+{
+  "title": "The Determinant: How Much a Matrix Stretches Space",
+  "logline": "Watch a grid warp, follow one square, and the determinant becomes a number you can see.",
+  "color_story": "PRIMARY blue is the moving grid; POSITIVE green is i-hat and NEGATIVE red is j-hat (the classic basis colours); HIGHLIGHT yellow is the unit square; SECONDARY teal is other regions; ACCENT terracotta is the determinant itself; FAINT grey is the original grid left behind.",
+  "scenes": [
+    {
+      "id": "s1",
+      "title": "A matrix moves the plane",
+      "purpose": "Picture a 2x2 matrix as a transformation of the whole plane.",
+      "beats": [
+        {"id": "s1b1", "narration": "What does the determinant of a matrix actually measure? Not a formula to memorise, but a number you can see.", "visual": "Title card 'The Determinant' with italic subtitle 'how much a matrix stretches space'."},
+        {"id": "s1b2", "narration": "Think of a two by two matrix as a machine that moves every point of the plane. These two arrows mark one step right, and one step up.", "visual": "Clear. A faint static grid and a blue grid on top fill the frame; green i-hat and red j-hat arrows grow from the origin."},
+        {"id": "s1b3", "narration": "Apply the matrix, and the whole grid moves with it. Lines stay straight and evenly spaced, and the arrows land on the matrix's two columns.", "visual": "The matrix [[2, 1], [0, 1.5]] appears top right on a dark plate, columns tinted green and red; the blue grid and both arrows transform, i-hat to (2, 0) and j-hat to (1, 1.5)."}
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Follow one square",
+      "purpose": "Find the factor by which the unit square's area changes.",
+      "beats": [
+        {"id": "s2b1", "narration": "Now watch a single square, sitting on the two arrows, one unit on each side. Its area is exactly one.", "visual": "Heading. Untransformed grid and arrows; a yellow unit square fills in on top of them; readout 'area = 1' top right on a plate."},
+        {"id": "s2b2", "narration": "After the transformation, it becomes a parallelogram. Measure it, and its area is three.", "visual": "The grid, arrows and square transform together; the square becomes a parallelogram; the readout changes to 'area = 3'."},
+        {"id": "s2b3", "narration": "That stretching factor, three, is the determinant. It tells you how much the matrix scales area.", "visual": "Below the readout, 'det = 3' is written with the 3 in terracotta and boxed; the parallelogram pulses once."}
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Every area, the same factor",
+      "purpose": "Show that all regions scale by the determinant, not only the square.",
+      "beats": [
+        {"id": "s3b1", "narration": "The surprising part is that every region grows by that same factor, whatever its shape.", "visual": "Heading. Grid with a teal circle, a teal triangle and a small teal square scattered near the origin."},
+        {"id": "s3b2", "narration": "Every shape can be filled with tiny grid squares, and every one of those grows by exactly three. So the whole shape does too.", "visual": "The grid and all three shapes transform; each shape gets a small 'times 3' label."}
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Zero and negative",
+      "purpose": "Connect the formula to the picture and read the special cases.",
+      "beats": [
+        {"id": "s4b1", "narration": "For a matrix with entries a, b, c and d, the determinant is a times d, minus b times c. Here that's two times one and a half, minus zero: three.", "visual": "Heading. Centered on a plate, det [[a, b], [c, d]] = ad - bc is written; below it the numbers: det [[2, 1], [0, 1.5]] = 2 times 1.5 minus 1 times 0 = 3, with 3 in terracotta."},
+        {"id": "s4b2", "narration": "If the determinant is zero, the plane is squashed onto a single line, and every area collapses to nothing.", "visual": "Clear the formulas. Grid, arrows and yellow square; the matrix [[1, 2], [0.5, 1]] collapses everything onto a line; readout 'det = 0'. Then the grid restores."},
+        {"id": "s4b3", "narration": "And a negative determinant means space has been flipped over, like turning a sheet of paper, while its size still measures the stretch.", "visual": "The matrix [[1, 0.5], [0, -1]] flips the grid: j-hat now points down and the square flips below the axis; readout 'det = -1' with 'orientation flipped'."}
+      ]
+    }
+  ]
+}

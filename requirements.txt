@@ -1,0 +1,41 @@
+# ConceptFlow AI - Python dependencies (tested on Python 3.13, Windows 11 and in the Docker image)
+# Exact versions that were tested together are in constraints.txt:
+#   pip install -r requirements.txt -c constraints.txt
+
+# Animation
+manim==0.21.0
+
+# Agent frameworks - the only two in the project
+google-adk==2.10.0      # the workflow graph, LLM agents, plugins (callbacks), session state, McpToolset
+crewai==1.15.23         # the writers' room crew, task guardrails, native MCP client
+google-genai>=2.25.0    # Gemini, shared by both frameworks through the model router
+
+# Agent-to-agent protocol: the CrewAI crew is served as an A2A agent, the ADK workflow is its client
+a2a-sdk[http-server]~=0.3.26
+
+# Model Context Protocol: the studio's tool server (and the client sessions)
+mcp>=1.28,<2
+
+# Tools behind MCP
+sympy>=1.14             # check_math (computer algebra)
+lark>=1.2               # SymPy's LaTeX grammar
+pypdf>=6.0              # read_document (PDF parser)
+
+# Observability: OpenTelemetry tracing, exported to Langfuse over OTLP/HTTP
+opentelemetry-api==1.42.1
+opentelemetry-sdk==1.42.1
+opentelemetry-exporter-otlp-proto-http==1.42.1
+google-api-core>=2.25,<2.31   # newer releases need opentelemetry >= 1.44, which ADK 2.10 does not allow
+
+# Voice
+edge-tts>=7.2.8         # free fallback voice (ElevenLabs and Sarvam are called over plain HTTPS)
+
+# Studio server
+fastapi>=0.141.1
+uvicorn[standard]>=0.54.0
+httpx>=0.28.1
+python-multipart>=0.0.32
+python-dotenv>=1.2.3
+
+# Development
+pytest>=9.1

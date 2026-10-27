@@ -1,0 +1,10 @@
+{
+  "visual_clarity": 9,
+  "aesthetics": 9,
+  "fidelity": 9,
+  "issues": [
+    {"scene": "s1", "beat": "s1b2", "severity": "low", "problem": "The tick numbers on the road are small and will be hard to read on a phone.", "fix": "Raise the NumberLine font_size from 24 to 28."},
+    {"scene": "s4", "beat": "s4b2", "severity": "low", "problem": "The h -> 0 label above the arrow is noticeably smaller than the surrounding algebra.", "fix": "Optionally set the arrow label in a slightly larger size, or leave as is; it reads as an annotation."}
+  ],
+  "summary": "Clean two-zone compositions with one focal point per beat, a consistent colour story and a crisp zoom in scene 3. Only minor legibility niceties remain."
+}

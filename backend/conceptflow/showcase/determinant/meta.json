@@ -1,0 +1,21 @@
+{
+  "title": "The Determinant: How Much a Matrix Stretches Space",
+  "prompt": "What does the determinant of a 2x2 matrix measure geometrically?",
+  "keywords": ["determinant", "determinants", "matrix", "matrices", "linear", "transformation", "transformations", "algebra", "area", "grid", "basis", "vector", "vectors", "eigenvector", "eigenvectors", "plane", "shear"],
+  "responses": {
+    "planner": ["analysis.json", "plan.json", "storyboard.json"],
+    "coder": ["coder_v1.md"],
+    "fixer": ["fixer_v1.md"],
+    "visual_critic": ["visual_review.json"],
+    "pedagogy_critic": ["pedagogy_review.json"]
+  },
+  "bug": null,
+  "coder_notes": [
+    "Every scene keeps a faint copy of the original grid behind the moving one, so the viewer can always see what changed.",
+    "i-hat and j-hat use the classic green and red, and the matrix columns are tinted to match where each arrow lands.",
+    "Text over the grid sits on dark plates so it stays legible whatever the grid does beneath it."
+  ],
+  "fixer_changes": [
+    "No changes needed: the module rendered cleanly; re-rendering as requested."
+  ]
+}

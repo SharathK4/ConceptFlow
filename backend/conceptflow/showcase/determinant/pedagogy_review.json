@@ -1,0 +1,9 @@
+{
+  "math_correctness": 10,
+  "pedagogy": 9,
+  "pacing": 9,
+  "issues": [
+    {"scene": "s4", "beat": "s4b3", "severity": "low", "problem": "The flip is shown but the reversed order of i-hat and j-hat is only implied.", "fix": "Optionally trace a small curved arrow from i-hat to j-hat before and after the flip."}
+  ],
+  "summary": "Correct throughout: the columns land where the matrix says, the areas scale by 3, and the zero and negative cases are exactly right. It builds from picture to formula in a natural order."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "The Determinant: How Much a Matrix Stretches Space",
+  "hook": "What does the determinant of a matrix actually measure - not as a formula, but as something you can see?",
+  "objectives": [
+    "See a 2x2 matrix as a transformation of the whole plane.",
+    "Interpret the determinant as the factor by which every area scales.",
+    "Explain what a zero or negative determinant means geometrically."
+  ],
+  "sections": [
+    {"title": "A matrix moves the plane", "goal": "Picture a matrix as a transformation.", "explanation": "Every point moves; grid lines stay straight, parallel and evenly spaced; the basis vectors land on the matrix's columns.", "key_formula": "\\begin{bmatrix} 2 & 1 \\\\ 0 & 1.5 \\end{bmatrix}", "visual_idea": "A grid with i-hat and j-hat warps under the matrix, over a faint copy of the original grid."},
+    {"title": "Follow one square", "goal": "Find the area factor.", "explanation": "The unit square becomes a parallelogram of area 3. That factor is the determinant.", "key_formula": "\\text{area} \\times 3", "visual_idea": "A yellow unit square becomes a parallelogram; the area readout changes from 1 to 3."},
+    {"title": "Every area, the same factor", "goal": "Generalise from the square to any region.", "explanation": "Any shape can be tiled by small grid squares, and each of those grows by the same factor, so every area scales by the determinant.", "key_formula": "", "visual_idea": "A circle, a triangle and a small square all transform, each labelled times 3."},
+    {"title": "Zero and negative", "goal": "Connect the formula and the special cases.", "explanation": "det = ad - bc. A zero determinant squashes the plane onto a line; a negative one flips its orientation.", "key_formula": "\\det\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = ad - bc", "visual_idea": "The formula with numbers; the plane collapsing onto a line; the square flipping over."}
+  ],
+  "takeaway": "The determinant is the area scaling factor of a linear transformation, with its sign recording whether the plane was flipped.",
+  "quiz": [
+    {"question": "A matrix has determinant 5. A region of area 2 is transformed by it. What is the new area?", "choices": ["10", "7", "2.5", "25"], "answer": 0, "why": "Every area scales by the determinant: 2 times 5 is 10."},
+    {"question": "What does a determinant of zero tell you?", "choices": ["The plane is squashed onto a line or a point", "The matrix is the identity", "Areas are unchanged", "The plane is rotated"], "answer": 0, "why": "Zero area scaling means everything collapses to lower dimension."},
+    {"question": "What does a negative determinant mean geometrically?", "choices": ["The transformation flips orientation", "Areas become negative numbers", "The transformation shrinks space", "The columns are parallel"], "answer": 0, "why": "The sign records orientation; the size of the number still measures the stretch."}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "topic": "The determinant of a 2x2 matrix",
+  "domain": "Linear algebra",
+  "core_insight": "A matrix moves the whole plane, and its determinant is the single factor by which it scales every area - negative when it flips the plane over, zero when it squashes the plane flat.",
+  "prerequisites": ["vectors in the plane", "matrix-vector multiplication", "area of a parallelogram"],
+  "key_ideas": [
+    "A 2x2 matrix is a linear transformation: it moves every point, keeping grid lines straight, parallel and evenly spaced, and the origin fixed.",
+    "The columns of the matrix are where the basis vectors i-hat and j-hat land.",
+    "The unit square becomes a parallelogram; its area is the determinant.",
+    "Every region scales by the same factor, because any shape can be filled with small grid squares.",
+    "det = ad - bc; zero means the plane collapses onto a line, negative means orientation flips."
+  ],
+  "central_formula": "\\det\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = ad - bc",
+  "intuitions": [
+    "Stretching a sheet of rubber printed with a grid.",
+    "Tracking one tile of the grid is enough to know what happens to all of them.",
+    "Turning a sheet of paper over reverses clockwise and counterclockwise."
+  ],
+  "misconceptions": [
+    "That the determinant is just an arbitrary formula to memorise.",
+    "That different shapes scale by different amounts under the same matrix.",
+    "That a negative determinant means negative area."
+  ],
+  "visual_opportunities": [
+    "A grid warping under the matrix, with a faint copy of the original behind it.",
+    "The basis vectors moving to the matrix columns.",
+    "A highlighted unit square turning into a parallelogram with a live area readout.",
+    "A circle and a triangle scaling by the same factor.",
+    "The whole plane collapsing onto a line; the square flipping over."
+  ]
+}

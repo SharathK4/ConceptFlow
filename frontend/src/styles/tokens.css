@@ -1,0 +1,112 @@
+/* Design tokens.
+ *
+ * The Keystone ground - cool lavender paper, near-black ink, one terracotta
+ * accent - with a second, dark register for the stage: the exact colours the
+ * lessons themselves are rendered in, so the video sits in its frame like a
+ * print in a mount rather than a black box pasted onto a page.
+ */
+
+@font-face {
+  /* Display face: the wordmark and card titles only. Personal-use demo
+   * licence (see public/fonts/AGAINST-LICENSE.txt); swap --display to
+   * 'Instrument Serif' before publishing anywhere. */
+  font-family: 'Against';
+  src: url('/fonts/against-regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* ---- ground ---- */
+  --paper: #f2f2fa;
+  --paper-cool: #eff0f8;
+  --paper-bright: #f5f5fb;
+
+  /* ---- surfaces ---- */
+  --surface: #fbfbfe;
+  --surface-2: #ecedf6;
+  --surface-sunk: #e3e5f1;
+
+  /* ---- ink ---- */
+  --ink: #15161d;
+  --ink-1: #383a47;
+  --ink-2: #6e7180;
+  --ink-3: #9698a8;
+  --ink-4: #b8bac9;
+
+  /* ---- structure ---- */
+  --border: #dcdeeb;
+  --border-soft: #e8e9f4;
+  --border-strong: #c4c7d8;
+
+  /* ---- the one accent ---- */
+  --accent: #b5462a;
+  --accent-2: #d4703f;
+  --accent-soft: rgba(181, 70, 42, 0.1);
+  --accent-line: rgba(181, 70, 42, 0.3);
+  --sage: #4f7360;
+
+  /* ---- the stage: the lessons' own palette ---- */
+  --stage: #0e1016;
+  --stage-2: #171a23;
+  --stage-3: #20242f;
+  --stage-line: rgba(236, 238, 244, 0.1);
+  --stage-ink: #eceef4;
+  --stage-muted: #9aa0b4;
+  --stage-faint: #4a5063;
+  --v-blue: #58c4dd;
+  --v-teal: #5cd0b3;
+  --v-yellow: #f7d96f;
+  --v-accent: #e8845c;
+
+  /* ---- elevation ---- */
+  --lift-1: 0 1px 2px rgba(40, 44, 68, 0.04), 0 12px 30px -24px rgba(40, 44, 68, 0.26);
+  --lift-2: 0 1px 3px rgba(40, 44, 68, 0.06), 0 26px 60px -34px rgba(40, 44, 68, 0.34);
+  --lift-3: 0 2px 8px rgba(40, 44, 68, 0.07), 0 48px 100px -44px rgba(40, 44, 68, 0.44);
+
+  /* ---- type ---- */
+  --display: 'Against', 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --text: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+  --mono: 'Cascadia Mono', 'SF Mono', 'Roboto Mono', ui-monospace, Menlo, monospace;
+  --num: 'tnum' 1, 'lnum' 1;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --slow: 620ms;
+  --med: 320ms;
+  --fast: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --slow: 1ms;
+    --med: 1ms;
+    --fast: 1ms;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "math_correctness": 10,
+  "pedagogy": 9,
+  "pacing": 8,
+  "issues": [
+    {"scene": "s4", "beat": "s4b2", "severity": "low", "problem": "The passage from 2x + h to the limit 2x is brisk for learners seeing it for the first time.", "fix": "Hold the boxed 2x on screen a moment longer before the parabola appears."}
+  ],
+  "summary": "Every formula and statement is correct, and the lesson motivates the limit through the 0/0 puzzle before defining it. Pacing is good, with one brisk moment at the final step of the algebra."
+}

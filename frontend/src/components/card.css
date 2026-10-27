@@ -1,0 +1,139 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  box-shadow: var(--lift-1);
+  opacity: 0;
+  animation: rise 780ms var(--ease-out) forwards;
+  animation-delay: var(--card-delay, 0ms);
+}
+
+.card__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 34px 0;
+}
+
+.card__index {
+  display: block;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  color: var(--ink-4);
+  margin-bottom: 12px;
+}
+
+.card__title {
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0.004em;
+  color: var(--ink);
+}
+
+.card__subtitle {
+  margin-top: 9px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  letter-spacing: 0.006em;
+  max-width: 62ch;
+}
+
+.card__aside {
+  flex: none;
+  padding-bottom: 2px;
+}
+
+.card__body {
+  position: relative;
+  padding: 24px 34px 30px;
+}
+
+.card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  background: transparent;
+  padding: 15px 34px 17px;
+  border-radius: 0 0 14px 14px;
+  text-align: left;
+}
+
+.card__reveals {
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  transition: color var(--med) var(--ease);
+}
+
+.card__foot:hover .card__reveals {
+  color: var(--ink-1);
+}
+
+.card__open {
+  flex: none;
+  position: relative;
+  width: 28px;
+  height: 1px;
+  background: var(--border-strong);
+  transition:
+    width var(--med) var(--ease),
+    background var(--med) var(--ease);
+}
+
+.card__open i {
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--border-strong);
+  border-right: 1px solid var(--border-strong);
+  transform: rotate(45deg);
+  transition: border-color var(--med) var(--ease);
+}
+
+.card__foot:hover .card__open {
+  width: 44px;
+  background: var(--accent);
+}
+
+.card__foot:hover .card__open i {
+  border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 840px) {
+  .card__head {
+    padding: 24px 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .card__body {
+    padding: 18px 20px 22px;
+  }
+  .card__foot {
+    padding: 14px 20px 15px;
+  }
+  .card__title {
+    font-size: 26px;
+  }
+}
